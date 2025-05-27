@@ -1,50 +1,176 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início | Escritório de Contabilidade ABC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundo Gamer Neon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    /* Cores neon */
+    :root {
+      --bg-dark: #0d0d0d;
+      --neon-blue: #00f0ff;
+      --neon-pink: #ff00f7;
+      --neon-purple: #bf00ff;
+      --text-glow: #00f0ff;
+      --button-bg: #1a1a1a;
+    }
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: #eee;
+      font-family: 'Orbitron', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--neon-pink);
+      text-shadow:
+        0 0 5px var(--neon-pink),
+        0 0 10px var(--neon-pink),
+        0 0 20px var(--neon-pink),
+        0 0 40px var(--neon-pink);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--neon-blue);
+      text-shadow:
+        0 0 3px var(--neon-blue),
+        0 0 7px var(--neon-blue);
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 450px;
+      box-shadow:
+        0 0 20px var(--neon-purple),
+        inset 0 0 15px var(--neon-purple);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow:
+        0 0 40px var(--neon-purple),
+        inset 0 0 30px var(--neon-purple);
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 120px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 6px var(--neon-blue));
+      transition: filter 0.3s ease;
+    }
+
+    .card img:hover {
+      filter: drop-shadow(0 0 15px var(--neon-pink));
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #ddd;
+      text-shadow:
+        0 0 5px var(--neon-blue);
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--neon-pink);
+      background: var(--button-bg);
+      border: 2px solid var(--neon-pink);
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow:
+        0 0 10px var(--neon-pink);
+      transition: all 0.3s ease;
+      text-shadow:
+        0 0 10px var(--neon-pink);
+    }
+
+    button:hover {
+      background: var(--neon-pink);
+      color: #111;
+      box-shadow:
+        0 0 20px var(--neon-pink),
+        0 0 30px var(--neon-pink);
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+      letter-spacing: 0.1em;
+      text-shadow:
+        0 0 4px var(--neon-purple);
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+        max-width: 90vw;
+      }
+
+      .card img {
+        width: 100px;
+      }
+
+      button {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <strong>Escritório de Contabilidade ABC</strong>
-        <nav>
-            <a href="index.html">Início</a> |
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="servicos.html">Serviços</a> |
-            <a href="contato.html">Contato</a>
-        </nav>
-    </header>
 
-    <hr>
+  <header>
+    <h1>Mundo Gamer Neon 🎮</h1>
+    <p>Ilumine sua paixão pelos jogos com o poder do neon!</p>
+  </header>
 
-    <main>
-        <section>
-            <img src="capa.jpeg" alt="Capa do site" width="620" height="320">
-            <h1>Bem-vindo ao Escritório de Contabilidade ABC</h1>
-            <p>Somos uma empresa de contabilidade comprometida em oferecer serviços de alta qualidade para empresas de todos os segmentos. Nossa equipe de profissionais altamente qualificados está pronta para ajudá-lo a alcançar seus objetivos financeiros e tomar decisões estratégicas para o crescimento do seu negócio.</p>
-        </section>
+  <section class="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/3253/3253884.png" alt="Controle de videogame neon" />
+    <p>
+      Mergulhe no universo dos games com notícias quentes, análises, dicas e tudo que você precisa para brilhar no mundo dos jogos!
+    </p>
+    <button onclick="explorar()">Explorar Agora 🚀</button>
+  </section>
 
-        <section>
-            <h2>Missão</h2>
-            <p>Nossa missão é fornecer soluções contábeis eficientes e personalizadas, visando a satisfação de nossos clientes e a excelência na prestação de serviços.</p>
-            <h2>Visão</h2>
-            <p>Nossa visão é ser referência em serviços contábeis, contribuindo para o sucesso e crescimento sustentável de nossos clientes.</p>
-            <h2>Valores</h2>
-            <ul>
-                <li>Compromisso com a ética e a transparência</li>
-                <li>Excelência no atendimento e nos serviços prestados</li>
-                <li>Inovação e atualização constante</li>
-                <li>Respeito e valorização das pessoas</li>
-            </ul>
-        </section>.
-        
-    </main>
-    
-    <hr>
+  <footer>
+    &copy; 2025 Carlos Daniel | Feito com 💡 & neon
+  </footer>
 
-    <footer>
-        <p>&copy; 2024 Escritório de Contabilidade ABC</p>
-    </footer>
+  <script>
+    function explorar() {
+      alert("Segure sua energia neon! A aventura gamer começa em breve! ⚡");
+    }
+  </script>
+
 </body>
 </html>
